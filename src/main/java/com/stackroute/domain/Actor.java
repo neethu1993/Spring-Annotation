@@ -1,5 +1,6 @@
 package com.stackroute.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +15,8 @@ public class Actor {
 
     public Actor() {
     }
-    public Actor(String name,String gender,int age){
+    @Autowired
+    public Actor(@Value("neethu") String name,@Value("female") String gender,@Value("22") int age){
         this.name = name;
         this.gender = gender;
         this.age = age;
