@@ -5,14 +5,19 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Actor {
-    @Value("neethu")
+   // @Value("neethu")
     private String name;
-    @Value("female")
+    //@Value("female")
     private String gender;
-    @Value("22")
+    //@Value("22")
     private int age;
 
     public Actor() {
+    }
+    public Actor(String name,String gender,int age){
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
     }
 
     public String getName() {
